@@ -1,0 +1,20 @@
+#import the magic random picker
+import random, urllib2
+#list of things to pick from
+activities_to_do = urllib2.urlopen('https://raw.githubusercontent.com/bellcodo/potential-octo-chainsaw/master/code_activities_we_like.lst').read()
+activities_to_do = activities_to_do.split()
+going_to_do = random.choice(activities_to_do)
+print(activities_to_do)
+#a way to tell the user what to do
+print("typing.io, codeskulptor, codecombat, codeacademy, scratch, kaggle, or tynker?")
+print("I will do "+str(going_to_do))
+me=input("what will you do?I am doing "+ going_to_do)
+if me == activities_to_do:
+    print("you will do "+me)
+    if me == activities_to_do:
+        print("you're going to "+ going_to_do + " too!?")
+    else:
+        print("so see you later!")
+else:
+    print(me+" is an unknown input")
+    
